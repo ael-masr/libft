@@ -6,7 +6,7 @@
 /*   By: ael-masr <ael-masr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 21:14:51 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/22 00:42:52 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/02/24 22:24:11 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha (c) || ft_isdigit (c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

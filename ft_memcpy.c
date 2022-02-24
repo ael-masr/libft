@@ -6,13 +6,13 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:46:24 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/16 20:40:56 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/02/25 01:03:45 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dst, const void *scr, size_t n)
+void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*d;

@@ -6,28 +6,28 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:42:57 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/16 21:03:12 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/02/25 01:43:45 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
+
+#include "libft.h"
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	char	*s;
+	size_t	i;
 	char	*d;
+	char	*s;
 
+	d = (char*)dst;
+	s = (char*)src;
 	i = 0;
-	d = (char *)dst;
-	s = (char *)src;
-	while (d[i++])
-	{
-		d[i] = s[i];
-	}
+	if (d == '\0' && s == '\0')
+		return (0);
+	if (s < d)
+		while (++i <= len)
+			d[len - i] = s[len - i];
+	else
+		while (len-- > 0)
+			*(d++) = *(s++);
 	return (dst);
 }
-
-int main()
-{
-	printf("%s",ft_memmove("hello", "world" , 5));
-			return(0);
-			}

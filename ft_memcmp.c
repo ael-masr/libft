@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 17:25:22 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/24 22:52:28 by ael-masr         ###   ########.fr       */
+/*   Created: 2022/02/25 02:30:15 by ael-masr          #+#    #+#             */
+/*   Updated: 2022/02/25 02:52:07 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 32 && c < 127)
-		return (1);
+	const unsigned char		*str1;
+	const unsigned char		*str2;
+
+	if (s1 == s2 || n == 0)
+		return (0);
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	while (n--)
+	{
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		if (n)
+		{
+			str1++;
+			str2++;
+		}
+	}
 	return (0);
 }

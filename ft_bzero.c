@@ -6,12 +6,20 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:32:22 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/16 19:45:26 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/02/25 00:09:06 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t len)
 {
-	ft_memset(s, 0, n);
+	char *p;
+
+	p = (char *)s;
+	while (len > 0)
+	{
+		p[len - 1] = 0;
+		len--;
+	}
 }

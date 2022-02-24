@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:05:44 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/16 23:00:15 by ael-masr         ###   ########.fr       */
+/*   Created: 2022/02/25 03:18:27 by ael-masr          #+#    #+#             */
+/*   Updated: 2022/02/25 03:32:29 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned int	ft_strlcpy(char *dst, char *src,unsigned int dstsize)
+
+#include <stdlib.h>
+
+char	*ft_strdup(char *src)
 {
-	unsigned int counter;
-	unsigned int i;
+	char	*new;
+	int		i;
+	int		size;
 
-	counter = 0;
+	size = 0;
+	while (src[size])
+		++size;
+	if (!(new = malloc(sizeof(char) * (size + 1))))
+		return (NULL);
 	i = 0;
-
-		while (src[counter])
-			counter++;
-
-		while (src[i] && i < (dstsize-1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-	dst[i] ='\0';
-	return (counter);
+	while (src[i])
+	{
+		new[i] = src[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
 }

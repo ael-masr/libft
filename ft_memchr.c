@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-masr <ael-masr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 16:19:01 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/24 22:21:43 by ael-masr         ###   ########.fr       */
+/*   Created: 2022/02/25 02:53:25 by ael-masr          #+#    #+#             */
+/*   Updated: 2022/02/25 03:18:04 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ((n >= 65 && n <= 90) || (n >= 97 && n <= 122))
-		return (1);
+	size_t	i;
+	char	*str;
+	char	character;
+
+	str = (char *)s;
+	character = (char)c;
+	i = 0;
+	while (i < n)
+	{
+		if (*str == character)
+		{
+			return (str);
+		}
+		str++;
+		i++;
+	}
 	return (0);
 }
