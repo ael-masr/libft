@@ -6,16 +6,18 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 17:30:01 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/24 22:18:23 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/02/28 00:03:44 by azizelmasri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
+
