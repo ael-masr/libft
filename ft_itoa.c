@@ -6,7 +6,7 @@
 /*   By: azizelmasri <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 01:56:51 by azizelmasri       #+#    #+#             */
-/*   Updated: 2022/03/18 02:11:31 by azizelmasri      ###   ########.fr       */
+/*   Updated: 2022/03/20 22:45:50 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,4 @@ char	*ft_itoa(int n)
 		number = n;
 	x = ft_array(x, number, len);
 	return (x);
-}
-	
+}	

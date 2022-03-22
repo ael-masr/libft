@@ -6,7 +6,7 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 03:18:27 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/25 03:32:29 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/03/21 00:01:48 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strdup(char *src)
 	size = 0;
 	while (src[size])
 		++size;
-	if (!(new = malloc(sizeof(char) * (size + 1))))
+	new = malloc(sizeof(char) * (size + 1));
+	if (!new)
 		return (NULL);
 	i = 0;
 	while (src[i])

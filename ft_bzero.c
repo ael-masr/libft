@@ -6,7 +6,7 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:32:22 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/25 00:09:06 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/03/20 20:20:41 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t len)
 {
-	char *p;
+	char	*p;
 
 	p = (char *)s;
 	while (len > 0)

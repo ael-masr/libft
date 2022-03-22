@@ -1,5 +1,5 @@
 #include "libft.h"
-
+#include <stdio.h>
 static	int	char_in_set(char c, char const *set)
 {
 	int	x;
@@ -45,4 +45,5 @@ char	*ft_strtrim(char const *s1, char const *set)
  	char strTrim[] = "Mat";
  	printf("%s",ft_strtrim(str1, strTrim));
  	return (0);
- }*/
+ }
+ */

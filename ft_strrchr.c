@@ -6,7 +6,7 @@
 /*   By: azizelmasri <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 00:35:21 by azizelmasri       #+#    #+#             */
-/*   Updated: 2022/02/28 00:54:22 by azizelmasri      ###   ########.fr       */
+/*   Updated: 2022/03/20 20:29:05 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ char	*ft_strrchr(const char *s, int c)
 	if (s[len] == (char)c)
 		return ((char *)&s[len]);
 	return (NULL);
-}
-	
+}	
