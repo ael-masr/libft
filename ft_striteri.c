@@ -6,26 +6,23 @@
 /*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 00:10:15 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/03/21 00:33:56 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/03/22 23:41:42 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	int n;
-	int i;
 
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	unsigned int	i;
+
+	if (!s || !f)
+		return;
 	i = 0;
-	n = 0;
-	if (s != NULL && f != NULL)
+	while (s[i])
 	{
-		i = ft_strlen(s);
-		while(n < i)
-		{
-			(*f) (n, s);
-			n++;
-			s++;
-		}
+		f(i, s + i);
+		i++;
 	}
 }
 

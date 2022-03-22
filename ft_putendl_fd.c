@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azizelmasri <marvin@42.fr>                 +#+  +:+       +#+        */
+/*   By: ael-masr <ael-masr@student.ae>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/21 22:17:42 by azizelmasri       #+#    #+#             */
-/*   Updated: 2022/03/22 23:34:33 by ael-masr         ###   ########.fr       */
+/*   Created: 2022/03/22 23:08:13 by ael-masr          #+#    #+#             */
+/*   Updated: 2022/03/22 23:38:38 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 #include "libft.h"
+#include <unistd.h>
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	nbr;
+	size_t	i;
 
-	if (n < 0)
+	i = 0;
+	while (i < ft_strlen(s))
 	{
-		ft_putchar_fd('-', fd);
-		nbr = (unsigned int)(n * -1);
+		write(fd, &s[i], 1);
+		i++;
 	}
-	else
-		nbr = (unsigned int)n;
-	if (nbr >= 10)
-		ft_putnbr_fd(nbr / 10, fd);
-	ft_putchar_fd((char)(nbr % 10 + 48), fd);
+	write(fd, "\n", 1);
 }

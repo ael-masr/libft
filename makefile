@@ -2,7 +2,7 @@ NAME = libft.a
 
 CC = gcc
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_strlen.c ft_strlcpy.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_strlen.c ft_strlcpy.c ft_striteri.c ft_putchar_fd.c 
 
 OBJS = ${SRCS:.c=.o}
 

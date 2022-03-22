@@ -6,7 +6,7 @@
 /*   By: azizelmasri <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 01:56:51 by azizelmasri       #+#    #+#             */
-/*   Updated: 2022/03/20 22:45:50 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/03/22 23:08:40 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*ft_array(char *x, unsigned int number, long int len)
 {
 	while (number > 0)
 	{
-		x[len--] = 48 + (number % 10);
+		x[len--] = (number % 10) + 48;
 		number = number / 10;
 	}
 	return (x);
