@@ -6,7 +6,7 @@
 /*   By: ael-masr <ael-masr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 19:02:05 by ael-masr          #+#    #+#             */
-/*   Updated: 2022/02/14 19:02:20 by ael-masr         ###   ########.fr       */
+/*   Updated: 2022/03/25 05:06:29 by ael-masr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct		s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -75,4 +76,5 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 								void (*del)(void *));
 int					get_next_line(int fd, char **line);
 
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 #endif
